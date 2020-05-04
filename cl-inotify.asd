@@ -40,7 +40,6 @@
                #:binary-types
                #:trivial-utf-8
                #:osicat)
-  :weakly-depends-on (#:iolib)
   :in-order-to ((asdf:test-op (asdf:load-op #:cl-inotify-tests)))
   :perform (asdf:test-op :after (op c)
              (funcall (find-symbol (symbol-name '#:run!) '#:fiveam)
